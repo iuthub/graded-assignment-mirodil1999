@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+
+Route::get('signIn', "TodoListController@getSignIn")->name("signIn");
+
+Route::get('register', "TodoListController@getRegister")->name("register");
